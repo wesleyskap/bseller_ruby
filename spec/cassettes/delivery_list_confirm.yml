@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://backstg.bseller.com.br/services/CPPedido?wsdl
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:impl="http://back.bseller.com.br/esigesaasws/services/CPPedido"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://wrappedarray/"><env:Body><impl:confirmaConsultaEntrega><idUniNeg>1</idUniNeg><confirmaSN>S</confirmaSN><idCia>11263</idCia><usuario>OhgNXNbjhxeaaHpW/cJOSQ==</usuario><senha>KKbNFjzRA5xb0mccA+CK0Q==</senha></impl:confirmaConsultaEntrega></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"confirmaConsultaEntrega"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '556'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Mon, 02 Nov 2015 16:29:50 GMT
+      Content-Type:
+      - text/xml; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:confirmaConsultaEntregaResponse
+        soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://back.bseller.com.br/esigesaasws/services/CPPedido"><confirmaConsultaEntregaReturn
+        xsi:type="xsd:string">Confirma consulta entrega efetuada com sucesso</confirmaConsultaEntregaReturn></ns1:confirmaConsultaEntregaResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Mon, 02 Nov 2015 16:29:50 GMT
+recorded_with: VCR 2.9.3

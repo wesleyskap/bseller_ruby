@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/api/itens/262261?api_key=2290A89AA7C7493AE0536AF3A8C05E17&tpInterface=SITE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Wed, 28 Oct 2015 17:31:32 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+      X-Cache:
+      - MISS from localhost
+      X-Cache-Lookup:
+      - MISS from localhost:3128
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 localhost (squid/3.3.10)
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb2RpZ29JdGVtIjoiMjYyMjYxIiwiY29kaWdvVGVyY2Vpcm8iOiIyNjIy
+        NjEiLCJjb2RpZ29Gb3JuZWNlZG9yIjoiNzg1ODc3OCIsIm5vbWUiOiJUZXN0
+        ZSIsInRpdHVsbyI6bnVsbCwiZGVzY3JpY2FvIjpudWxsLCJtYXJjYSI6bnVs
+        bCwic2l0dWFjYW8iOiJBIiwiZGF0YUNhZGFzdHJvIjoiMjAxNS0xMC0yMyAx
+        OTo1NToxMiIsImRhdGFBdHVhbGl6YWNhb0NhZGFzdHJvIjpudWxsLCJvcGVy
+        YWNhbyI6Ik4iLCJpdGVtUGFpIjpmYWxzZSwiY29kaWdvSXRlbVBhaSI6bnVs
+        bCwiYnJpbmRlIjpmYWxzZSwidGlwb0l0ZW0iOiJQIiwiaXRlbVZpcnR1YWwi
+        OnsidGlwb0l0ZW1WaXJ0dWFsIjpudWxsLCJpdGVtRmlzaWNvIjpmYWxzZSwi
+        cHJhem9WYWxpZGFkZUdhcmFudGlhIjpudWxsLCJ0aXBvR2FyYW50aWEiOm51
+        bGx9LCJwcmF6b0dhcmFudGlhRm9ybmVjZWRvciI6bnVsbCwidGlwb1RyYW5z
+        cG9ydGUiOnsiaWQiOjEsIm5vbWUiOiJMZXZlIn0sInVuaWRhZGVNZWRpZGEi
+        OnsiaWQiOiJVTiIsIm5vbWUiOiJVbmlkYWRlIn0sIm9rRmlzY2FsIjpmYWxz
+        ZSwidmVuZGF2ZWwiOmZhbHNlLCJjb250cm9sYVZlbmRhIjpmYWxzZSwiZXN0
+        cnV0dXJhTWVyY2Fkb2xvZ2ljYSI6eyJkZXBhcnRhbWVudG8iOnsiaWQiOjEs
+        Im5vbWUiOiJMaXZybyJ9LCJzZXRvciI6eyJpZCI6MSwibm9tZSI6Ik5lZ8Oz
+        Y2lvIn0sImZhbWlsaWEiOnsiaWQiOjEsIm5vbWUiOiJBZG1pbmlzdHJhw6fD
+        o28gZSBOZWfDs2Npb3MifSwic3ViRmFtaWxpYSI6eyJpZCI6MSwibm9tZSI6
+        IkFkbWluaXN0cmHDp8OjbyJ9fSwiZGF0YUxhbmNhbWVudG8iOm51bGwsInF1
+        YW50aWRhZGVQcmV2ZW5kYSI6bnVsbCwiZGltZW5zb2VzIjp7ImFsdHVyYSI6
+        MS4wLCJsYXJndXJhIjoxLjAsImNvbXByaW1lbnRvIjoxLjB9LCJwZXNvIjp7
+        InVuaXRhcmlvIjoxLjAsImJydXRvIjoxLjB9LCJlYW4iOlt7ImNvZEVhbiI6
+        MTE5Njk3MDAwMzg2fV0sImNvbXBvbmVudGVzS2l0IjpbXSwiZmljaGFUZWNu
+        aWNhIjpbXSwiY2F0ZWdvcmlhcyI6W10sInZhcmlhY29lcyI6W10sInByZWNv
+        IjpbXSwidGFncyI6bnVsbH0=
+    http_version: 
+  recorded_at: Wed, 28 Oct 2015 17:31:32 GMT
+recorded_with: VCR 2.9.3

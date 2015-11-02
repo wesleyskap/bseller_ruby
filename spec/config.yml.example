@@ -1,0 +1,8 @@
+ws:
+  soap_endpoint: http://backstg.bseller.com.br/services
+  json_endpoint: http://backstg.bseller.com.br/api
+  json_token: 0
+  username: 'username'
+  password: 'password'
+  cia_id: 000000
+  log: false

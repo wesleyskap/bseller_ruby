@@ -1,0 +1,1006 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/services/CPPedido?wsdl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Wed, 16 Sep 2015 20:24:50 GMT
+      Content-Type:
+      - text/xml; charset=utf-8
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      X-Cache:
+      - MISS from localhost
+      X-Cache-Lookup:
+      - MISS from localhost:3128
+      Via:
+      - 1.1 localhost (squid/3.3.10)
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <wsdl:definitions targetNamespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://back.bseller.com.br/esigesaasws/services/CPPedido" xmlns:intf="http://back.bseller.com.br/esigesaasws/services/CPPedido" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://wrappedarray/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <!--WSDL created by Apache Axis version: 1.4
+        Built on Apr 22, 2006 (06:55:48 PDT)-->
+         <wsdl:types>
+          <schema targetNamespace="http://wrappedarray/" xmlns="http://www.w3.org/2001/XMLSchema">
+           <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+           <complexType name="ClienteEnt">
+            <sequence>
+             <element name="p_bairro_ent" nillable="true" type="xsd:string"/>
+             <element name="p_cep_ent" nillable="true" type="xsd:long"/>
+             <element name="p_cidade_ent" nillable="true" type="xsd:string"/>
+             <element name="p_compl_ent" nillable="true" type="xsd:string"/>
+             <element name="p_email_ent" nillable="true" type="xsd:string"/>
+             <element name="p_fax_ent" nillable="true" type="xsd:string"/>
+             <element name="p_id_cliente_ent" nillable="true" type="xsd:long"/>
+             <element name="p_id_tipclie_ent" nillable="true" type="xsd:long"/>
+             <element name="p_insest_ent" nillable="true" type="xsd:string"/>
+             <element name="p_logradouro_ent" nillable="true" type="xsd:string"/>
+             <element name="p_nome_ent" nillable="true" type="xsd:string"/>
+             <element name="p_numero_ent" nillable="true" type="xsd:long"/>
+             <element name="p_pais_ent" nillable="true" type="xsd:string"/>
+             <element name="p_referencia_ent" nillable="true" type="xsd:string"/>
+             <element name="p_tel_celular" nillable="true" type="xsd:string"/>
+             <element name="p_tel_comercial" nillable="true" type="xsd:string"/>
+             <element name="p_tel_residencial" nillable="true" type="xsd:string"/>
+             <element name="p_uf_ent" nillable="true" type="xsd:string"/>
+             <element name="p_zip_code_ent" nillable="true" type="xsd:string"/>
+            </sequence>
+           </complexType>
+           <complexType name="ClienteFat">
+            <sequence>
+             <element name="p_bairro_fat" nillable="true" type="xsd:string"/>
+             <element name="p_cep_fat" nillable="true" type="xsd:long"/>
+             <element name="p_cidade_fat" nillable="true" type="xsd:string"/>
+             <element name="p_compl_fat" nillable="true" type="xsd:string"/>
+             <element name="p_dt_nasc" nillable="true" type="xsd:string"/>
+             <element name="p_email_fat" nillable="true" type="xsd:string"/>
+             <element name="p_fax_fat" nillable="true" type="xsd:string"/>
+             <element name="p_id_clasf_cliente_fat" nillable="true" type="xsd:long"/>
+             <element name="p_id_cliente_fat" nillable="true" type="xsd:long"/>
+             <element name="p_id_crt" nillable="true" type="xsd:long"/>
+             <element name="p_id_tipclie_fat" nillable="true" type="xsd:long"/>
+             <element name="p_insest_fat" nillable="true" type="xsd:string"/>
+             <element name="p_logradouro_fat" nillable="true" type="xsd:string"/>
+             <element name="p_nome_fat" nillable="true" type="xsd:string"/>
+             <element name="p_numero_fat" nillable="true" type="xsd:long"/>
+             <element name="p_pais_fat" nillable="true" type="xsd:string"/>
+             <element name="p_referencia_fat" nillable="true" type="xsd:string"/>
+             <element name="p_rg" nillable="true" type="xsd:string"/>
+             <element name="p_sexo" nillable="true" type="xsd:string"/>
+             <element name="p_tel_celular" nillable="true" type="xsd:string"/>
+             <element name="p_tel_comercial" nillable="true" type="xsd:string"/>
+             <element name="p_tel_residencial" nillable="true" type="xsd:string"/>
+             <element name="p_uf_fat" nillable="true" type="xsd:string"/>
+             <element name="p_zip_code_fat" nillable="true" type="xsd:string"/>
+            </sequence>
+           </complexType>
+           <complexType name="Entrega">
+            <sequence>
+             <element name="p_dt_entrega_prom" nillable="true" type="xsd:string"/>
+             <element name="p_id_periodo_agenda" nillable="true" type="xsd:long"/>
+             <element name="p_id_tp_entrega" nillable="true" type="xsd:long"/>
+            </sequence>
+           </complexType>
+           <complexType name="Valores">
+            <sequence>
+             <element name="p_vl_desp_fin" nillable="true" type="xsd:double"/>
+             <element name="p_vl_despesas" nillable="true" type="xsd:double"/>
+             <element name="p_vl_frete" nillable="true" type="xsd:double"/>
+             <element name="p_vl_merc" nillable="true" type="xsd:double"/>
+            </sequence>
+           </complexType>
+           <complexType name="Cabecalho">
+            <sequence>
+             <element name="clienteent" nillable="true" type="tns1:ClienteEnt"/>
+             <element name="clientefat" nillable="true" type="tns1:ClienteFat"/>
+             <element name="entrega" nillable="true" type="tns1:Entrega"/>
+             <element name="p_cif_fob" nillable="true" type="xsd:string"/>
+             <element name="p_cod_vendedor" nillable="true" type="xsd:string"/>
+             <element name="p_dt_emissao" nillable="true" type="xsd:string"/>
+             <element name="p_dt_inclusao" nillable="true" type="xsd:string"/>
+             <element name="p_id_canal" nillable="true" type="xsd:string"/>
+             <element name="p_id_cia" nillable="true" type="xsd:long"/>
+             <element name="p_id_lista" nillable="true" type="xsd:string"/>
+             <element name="p_id_unineg" nillable="true" type="xsd:long"/>
+             <element name="p_in_consumo" nillable="true" type="xsd:string"/>
+             <element name="p_in_pedido" nillable="true" type="xsd:string"/>
+             <element name="p_in_quebra" nillable="true" type="xsd:string"/>
+             <element name="p_ip_origem" nillable="true" type="xsd:string"/>
+             <element name="p_obs_etiqueta" nillable="true" type="xsd:string"/>
+             <element name="p_origem_interface" nillable="true" type="xsd:string"/>
+             <element name="p_ped_cliente" nillable="true" type="xsd:long"/>
+             <element name="p_ped_externo" nillable="true" type="xsd:string"/>
+             <element name="p_ped_loja" nillable="true" type="xsd:string"/>
+             <element name="p_utm_campaign" nillable="true" type="xsd:string"/>
+             <element name="p_utm_medium" nillable="true" type="xsd:string"/>
+             <element name="p_utm_source" nillable="true" type="xsd:string"/>
+             <element name="valores" nillable="true" type="tns1:Valores"/>
+            </sequence>
+           </complexType>
+           <complexType name="Credencial">
+            <sequence>
+             <element name="senha" nillable="true" type="xsd:string"/>
+             <element name="usuario" nillable="true" type="xsd:string"/>
+            </sequence>
+           </complexType>
+           <complexType name="ItemPersonalizacao">
+            <sequence>
+             <element name="p_atributo" nillable="true" type="xsd:string"/>
+             <element name="p_descricao" nillable="true" type="xsd:string"/>
+             <element name="p_seq" nillable="true" type="xsd:long"/>
+            </sequence>
+           </complexType>
+           <complexType name="ItemPersonalizacaoArray">
+            <complexContent>
+             <restriction base="soapenc:Array">
+              <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ItemPersonalizacao[]"/>
+             </restriction>
+            </complexContent>
+           </complexType>
+           <complexType name="ItemAgrupamento">
+            <sequence>
+             <element name="p_agrupamento" nillable="true" type="xsd:long"/>
+             <element name="p_qt_item" nillable="true" type="xsd:long"/>
+             <element name="personalizacoes" nillable="true" type="tns1:ItemPersonalizacaoArray"/>
+            </sequence>
+           </complexType>
+           <complexType name="ItemAgrupamentoArray">
+            <complexContent>
+             <restriction base="soapenc:Array">
+              <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ItemAgrupamento[]"/>
+             </restriction>
+            </complexContent>
+           </complexType>
+           <complexType name="Item">
+            <sequence>
+             <element name="agrupamentos" nillable="true" type="tns1:ItemAgrupamentoArray"/>
+             <element name="p_cod_estab_est" nillable="true" type="xsd:long"/>
+             <element name="p_cod_estab_saida" nillable="true" type="xsd:long"/>
+             <element name="p_filial_cnpj" nillable="true" type="xsd:long"/>
+             <element name="p_id_contr_transp" nillable="true" type="xsd:string"/>
+             <element name="p_id_item" nillable="true" type="xsd:string"/>
+             <element name="p_id_item_garantido" nillable="true" type="xsd:string"/>
+             <element name="p_id_item_kit" nillable="true" type="xsd:string"/>
+             <element name="p_id_item_pai" nillable="true" type="xsd:string"/>
+             <element name="p_id_transp" nillable="true" type="xsd:long"/>
+             <element name="p_pz_cd" nillable="true" type="xsd:long"/>
+             <element name="p_pz_forn" nillable="true" type="xsd:long"/>
+             <element name="p_pz_transit" nillable="true" type="xsd:long"/>
+             <element name="p_qt" nillable="true" type="xsd:long"/>
+             <element name="p_seq" nillable="true" type="xsd:long"/>
+             <element name="p_seq_garantido" nillable="true" type="xsd:long"/>
+             <element name="p_tp_estoque" nillable="true" type="xsd:string"/>
+             <element name="p_tp_item" nillable="true" type="xsd:string"/>
+             <element name="p_vl_custo" nillable="true" type="xsd:double"/>
+             <element name="p_vl_desc_cond_unit" nillable="true" type="xsd:double"/>
+             <element name="p_vl_desc_inc_unit" nillable="true" type="xsd:double"/>
+             <element name="p_vl_despesa" nillable="true" type="xsd:double"/>
+             <element name="p_vl_frete" nillable="true" type="xsd:double"/>
+             <element name="p_vl_unitario" nillable="true" type="xsd:double"/>
+            </sequence>
+           </complexType>
+           <complexType name="ItemArray">
+            <complexContent>
+             <restriction base="soapenc:Array">
+              <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:Item[]"/>
+             </restriction>
+            </complexContent>
+           </complexType>
+           <complexType name="Pagamento">
+            <sequence>
+             <element name="p_bairro" nillable="true" type="xsd:string"/>
+             <element name="p_cartao_6digs" nillable="true" type="xsd:string"/>
+             <element name="p_cep" nillable="true" type="xsd:long"/>
+             <element name="p_cidade" nillable="true" type="xsd:string"/>
+             <element name="p_cod_seguranca" nillable="true" type="xsd:string"/>
+             <element name="p_compl" nillable="true" type="xsd:string"/>
+             <element name="p_cpf_tit_cartao" nillable="true" type="xsd:string"/>
+             <element name="p_dt_vencto_bo" nillable="true" type="xsd:string"/>
+             <element name="p_dt_vencto_cartao" nillable="true" type="xsd:string"/>
+             <element name="p_id_agencia" nillable="true" type="xsd:long"/>
+             <element name="p_id_banco" nillable="true" type="xsd:long"/>
+             <element name="p_id_bandeira_cartao" nillable="true" type="xsd:long"/>
+             <element name="p_id_cond_pagto" nillable="true" type="xsd:long"/>
+             <element name="p_id_conta" nillable="true" type="xsd:long"/>
+             <element name="p_id_meio_pagto" nillable="true" type="xsd:long"/>
+             <element name="p_id_vale" nillable="true" type="xsd:string"/>
+             <element name="p_logradouro" nillable="true" type="xsd:string"/>
+             <element name="p_nu_cartao" nillable="true" type="xsd:string"/>
+             <element name="p_nu_cupom" nillable="true" type="xsd:string"/>
+             <element name="p_nu_parcelas" nillable="true" type="xsd:long"/>
+             <element name="p_numero" nillable="true" type="xsd:long"/>
+             <element name="p_pais" nillable="true" type="xsd:string"/>
+             <element name="p_pe_juros" nillable="true" type="xsd:double"/>
+             <element name="p_seq" nillable="true" type="xsd:long"/>
+             <element name="p_sit_cod_seguranca" nillable="true" type="xsd:long"/>
+             <element name="p_titular_cartao" nillable="true" type="xsd:string"/>
+             <element name="p_uf" nillable="true" type="xsd:string"/>
+             <element name="p_vl_juros" nillable="true" type="xsd:double"/>
+             <element name="p_vl_juros_adm" nillable="true" type="xsd:double"/>
+             <element name="p_vl_meio" nillable="true" type="xsd:double"/>
+            </sequence>
+           </complexType>
+           <complexType name="PagamentoArray">
+            <complexContent>
+             <restriction base="soapenc:Array">
+              <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:Pagamento[]"/>
+             </restriction>
+            </complexContent>
+           </complexType>
+           <complexType name="PedidoDetalhesPresente">
+            <sequence>
+             <element name="p_id_cartao" nillable="true" type="xsd:long"/>
+             <element name="p_id_cia" nillable="true" type="xsd:long"/>
+             <element name="p_id_item" nillable="true" type="xsd:string"/>
+             <element name="p_id_tippre" nillable="true" type="xsd:long"/>
+             <element name="p_ped_cliente" nillable="true" type="xsd:string"/>
+             <element name="p_seq" nillable="true" type="xsd:long"/>
+             <element name="p_seq_item" nillable="true" type="xsd:long"/>
+             <element name="p_tx_cartao_cab" nillable="true" type="xsd:string"/>
+             <element name="p_tx_cartao_mens" nillable="true" type="xsd:string"/>
+             <element name="p_tx_cartao_rodape" nillable="true" type="xsd:string"/>
+            </sequence>
+           </complexType>
+           <complexType name="PedidoDetalhesPresenteArray">
+            <complexContent>
+             <restriction base="soapenc:Array">
+              <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:PedidoDetalhesPresente[]"/>
+             </restriction>
+            </complexContent>
+           </complexType>
+           <complexType name="Pedido">
+            <sequence>
+             <element name="cabecalho" nillable="true" type="tns1:Cabecalho"/>
+             <element name="credencial" nillable="true" type="tns1:Credencial"/>
+             <element name="item" nillable="true" type="tns1:ItemArray"/>
+             <element name="nomeArquivo" nillable="true" type="xsd:string"/>
+             <element name="nomeDiretorio" nillable="true" type="xsd:string"/>
+             <element name="pagamento" nillable="true" type="tns1:PagamentoArray"/>
+             <element name="pedidoDetalhesPresente" nillable="true" type="tns1:PedidoDetalhesPresenteArray"/>
+            </sequence>
+           </complexType>
+          </schema>
+         </wsdl:types>
+
+           <wsdl:message name="consultaItensRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="maxReg" type="xsd:int"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+              <wsdl:part name="tpInterface" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaEstoqueParcialRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="pTpInterface" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="enviaPedidoResponse">
+
+              <wsdl:part name="enviaPedidoReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="getVersaoRequest">
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaImportaValesResponse">
+
+              <wsdl:part name="confirmaImportaValesReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaTrackingRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="idUniNeg" type="xsd:long"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaEntregaRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="idUniNeg" type="xsd:long"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="getVersaoResponse">
+
+              <wsdl:part name="getVersaoReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaTrackingResponse">
+
+              <wsdl:part name="confirmaConsultaTrackingReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaImportaValesRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="idUniNeg" type="xsd:long"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaItensRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+              <wsdl:part name="tpInterface" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaEstoqueTotalRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="tpInterface" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="importaValesResponse">
+
+              <wsdl:part name="importaValesReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaEstoqueTotalResponse">
+
+              <wsdl:part name="confirmaConsultaEstoqueTotalReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaEstoqueTotalResponse">
+
+              <wsdl:part name="consultaEstoqueTotalReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaEntregaRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="idUniNeg" type="xsd:long"/>
+
+              <wsdl:part name="maxReg" type="xsd:int"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaItensResponse">
+
+              <wsdl:part name="consultaItensReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="importaValesRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="idUniNeg" type="xsd:long"/>
+
+              <wsdl:part name="maxReg" type="xsd:int"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaTrackingRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="idUniNeg" type="xsd:long"/>
+
+              <wsdl:part name="maxReg" type="xsd:int"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaEstoqueParcialResponse">
+
+              <wsdl:part name="consultaEstoqueParcialReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaEstoqueParcialResponse">
+
+              <wsdl:part name="confirmaConsultaEstoqueParcialReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaEstoqueTotalRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="pTpInterface" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaTrackingResponse">
+
+              <wsdl:part name="consultaTrackingReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaEstoqueParcialRequest">
+
+              <wsdl:part name="idCia" type="xsd:long"/>
+
+              <wsdl:part name="usuario" type="xsd:string"/>
+
+              <wsdl:part name="senha" type="xsd:string"/>
+
+              <wsdl:part name="tpInterface" type="xsd:string"/>
+
+              <wsdl:part name="confirmaSN" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaEntregaResponse">
+
+              <wsdl:part name="confirmaConsultaEntregaReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="consultaEntregaResponse">
+
+              <wsdl:part name="consultaEntregaReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="enviaPedidoRequest">
+
+              <wsdl:part name="pedido" type="tns1:Pedido"/>
+
+           </wsdl:message>
+
+           <wsdl:message name="confirmaConsultaItensResponse">
+
+              <wsdl:part name="confirmaConsultaItensReturn" type="xsd:string"/>
+
+           </wsdl:message>
+
+           <wsdl:portType name="CPPedido">
+
+              <wsdl:operation name="importaVales" parameterOrder="idCia idUniNeg maxReg usuario senha confirmaSN">
+
+                 <wsdl:input message="impl:importaValesRequest" name="importaValesRequest"/>
+
+                 <wsdl:output message="impl:importaValesResponse" name="importaValesResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaImportaVales" parameterOrder="idCia idUniNeg usuario senha confirmaSN">
+
+                 <wsdl:input message="impl:confirmaImportaValesRequest" name="confirmaImportaValesRequest"/>
+
+                 <wsdl:output message="impl:confirmaImportaValesResponse" name="confirmaImportaValesResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="enviaPedido" parameterOrder="pedido">
+
+                 <wsdl:input message="impl:enviaPedidoRequest" name="enviaPedidoRequest"/>
+
+                 <wsdl:output message="impl:enviaPedidoResponse" name="enviaPedidoResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="getVersao">
+
+                 <wsdl:input message="impl:getVersaoRequest" name="getVersaoRequest"/>
+
+                 <wsdl:output message="impl:getVersaoResponse" name="getVersaoResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaEntrega" parameterOrder="idCia idUniNeg maxReg usuario senha confirmaSN">
+
+                 <wsdl:input message="impl:consultaEntregaRequest" name="consultaEntregaRequest"/>
+
+                 <wsdl:output message="impl:consultaEntregaResponse" name="consultaEntregaResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaEntrega" parameterOrder="idCia idUniNeg usuario senha confirmaSN">
+
+                 <wsdl:input message="impl:confirmaConsultaEntregaRequest" name="confirmaConsultaEntregaRequest"/>
+
+                 <wsdl:output message="impl:confirmaConsultaEntregaResponse" name="confirmaConsultaEntregaResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaItens" parameterOrder="idCia maxReg usuario senha confirmaSN tpInterface">
+
+                 <wsdl:input message="impl:consultaItensRequest" name="consultaItensRequest"/>
+
+                 <wsdl:output message="impl:consultaItensResponse" name="consultaItensResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaItens" parameterOrder="idCia usuario senha confirmaSN tpInterface">
+
+                 <wsdl:input message="impl:confirmaConsultaItensRequest" name="confirmaConsultaItensRequest"/>
+
+                 <wsdl:output message="impl:confirmaConsultaItensResponse" name="confirmaConsultaItensResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaEstoqueParcial" parameterOrder="idCia usuario senha tpInterface confirmaSN">
+
+                 <wsdl:input message="impl:consultaEstoqueParcialRequest" name="consultaEstoqueParcialRequest"/>
+
+                 <wsdl:output message="impl:consultaEstoqueParcialResponse" name="consultaEstoqueParcialResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaEstoqueParcial" parameterOrder="idCia usuario senha pTpInterface confirmaSN">
+
+                 <wsdl:input message="impl:confirmaConsultaEstoqueParcialRequest" name="confirmaConsultaEstoqueParcialRequest"/>
+
+                 <wsdl:output message="impl:confirmaConsultaEstoqueParcialResponse" name="confirmaConsultaEstoqueParcialResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaEstoqueTotal" parameterOrder="idCia usuario senha tpInterface confirmaSN">
+
+                 <wsdl:input message="impl:consultaEstoqueTotalRequest" name="consultaEstoqueTotalRequest"/>
+
+                 <wsdl:output message="impl:consultaEstoqueTotalResponse" name="consultaEstoqueTotalResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaEstoqueTotal" parameterOrder="idCia usuario senha pTpInterface confirmaSN">
+
+                 <wsdl:input message="impl:confirmaConsultaEstoqueTotalRequest" name="confirmaConsultaEstoqueTotalRequest"/>
+
+                 <wsdl:output message="impl:confirmaConsultaEstoqueTotalResponse" name="confirmaConsultaEstoqueTotalResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaTracking" parameterOrder="idCia idUniNeg maxReg usuario senha confirmaSN">
+
+                 <wsdl:input message="impl:consultaTrackingRequest" name="consultaTrackingRequest"/>
+
+                 <wsdl:output message="impl:consultaTrackingResponse" name="consultaTrackingResponse"/>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaTracking" parameterOrder="idCia idUniNeg usuario senha confirmaSN">
+
+                 <wsdl:input message="impl:confirmaConsultaTrackingRequest" name="confirmaConsultaTrackingRequest"/>
+
+                 <wsdl:output message="impl:confirmaConsultaTrackingResponse" name="confirmaConsultaTrackingResponse"/>
+
+              </wsdl:operation>
+
+           </wsdl:portType>
+
+           <wsdl:binding name="CPPedido?wsdlSoapBinding" type="impl:CPPedido">
+
+              <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+              <wsdl:operation name="importaVales">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="importaValesRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="importaValesResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaImportaVales">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="confirmaImportaValesRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="confirmaImportaValesResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="enviaPedido">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="enviaPedidoRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="enviaPedidoResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="getVersao">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="getVersaoRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="getVersaoResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaEntrega">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="consultaEntregaRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="consultaEntregaResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaEntrega">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="confirmaConsultaEntregaRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="confirmaConsultaEntregaResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaItens">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="consultaItensRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="consultaItensResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaItens">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="confirmaConsultaItensRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="confirmaConsultaItensResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaEstoqueParcial">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="consultaEstoqueParcialRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="consultaEstoqueParcialResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaEstoqueParcial">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="confirmaConsultaEstoqueParcialRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="confirmaConsultaEstoqueParcialResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaEstoqueTotal">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="consultaEstoqueTotalRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="consultaEstoqueTotalResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaEstoqueTotal">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="confirmaConsultaEstoqueTotalRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="confirmaConsultaEstoqueTotalResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="consultaTracking">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="consultaTrackingRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="consultaTrackingResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+              <wsdl:operation name="confirmaConsultaTracking">
+
+                 <wsdlsoap:operation soapAction=""/>
+
+                 <wsdl:input name="confirmaConsultaTrackingRequest">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:input>
+
+                 <wsdl:output name="confirmaConsultaTrackingResponse">
+
+                    <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://back.bseller.com.br/esigesaasws/services/CPPedido" use="encoded"/>
+
+                 </wsdl:output>
+
+              </wsdl:operation>
+
+           </wsdl:binding>
+
+           <wsdl:service name="CPPedidoService">
+
+              <wsdl:port binding="impl:CPPedido?wsdlSoapBinding" name="CPPedido?wsdl">
+
+                 <wsdlsoap:address location="http://backstg.bseller.com.br/services/CPPedido?wsdl"/>
+
+              </wsdl:port>
+
+           </wsdl:service>
+
+        </wsdl:definitions>
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 20:24:50 GMT
+- request:
+    method: post
+    uri: http://backstg.bseller.com.br/services/CPPedido?wsdl
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:impl="http://back.bseller.com.br/esigesaasws/services/CPPedido"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://wrappedarray/"><env:Body><impl:consultaEstoqueTotal><confirmaSN>S</confirmaSN><tpInterface>B2W</tpInterface><idCia>11263</idCia><usuario>OhgNXNbjhxeaaHpW/cJOSQ==</usuario><senha>KKbNFjzRA5xb0mccA+CK0Q==</senha></impl:consultaEstoqueTotal></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"consultaEstoqueTotal"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '558'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Wed, 16 Sep 2015 20:24:50 GMT
+      Content-Type:
+      - text/xml; charset=utf-8
+      X-Powered-By:
+      - Servlet/2.5 JSP/2.1
+      X-Cache:
+      - MISS from localhost
+      X-Cache-Lookup:
+      - MISS from localhost:3128
+      Via:
+      - 1.1 localhost (squid/3.3.10)
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:consultaEstoqueTotalResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://back.bseller.com.br/esigesaasws/services/CPPedido\"><consultaEstoqueTotalReturn
+        xsi:type=\"xsd:string\">&lt;ESTOQUE&gt;\r\n&lt;ITEM ID_ITEM=&quot;118990&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;9&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;5&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118986&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;10&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;5&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118987&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;7&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;3&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118984&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;7&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;3&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118984&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;1&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;111&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;0&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;123121231&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;15&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;7&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;123121231&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;1&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;47&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;0&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118989&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;7&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;3&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118989&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;1&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;7&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;0&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118988&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;7&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;5&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118985&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;10&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;5&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;123460&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;1&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;1&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;0&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;118991&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;3&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;6&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;3&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;ITEM
+        ID_ITEM=&quot;254859&quot;&gt;\r\n&lt;ID_CIA&gt;11263&lt;/ID_CIA&gt;\r\n&lt;ESTABELECIMENTO&gt;1&lt;/ESTABELECIMENTO&gt;\r\n&lt;QTDE&gt;6&lt;/QTDE&gt;\r\n&lt;DT_DISP&gt;&lt;/DT_DISP&gt;\r\n&lt;PZ_DISP&gt;0&lt;/PZ_DISP&gt;\r\n&lt;/ITEM&gt;\r\n&lt;/ESTOQUE&gt;\r\n</consultaEstoqueTotalReturn></ns1:consultaEstoqueTotalResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 20:24:50 GMT
+recorded_with: VCR 2.9.3

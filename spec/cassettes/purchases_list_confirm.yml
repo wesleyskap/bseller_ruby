@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://backstg.bseller.com.br/api/compras/requisicao/status?api_key=2290A89AA7C7493AE0536AF3A8C05E17
+    body:
+      encoding: US-ASCII
+      string: '621539'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      Content-Length:
+      - '6'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Sun, 01 Nov 2015 17:23:47 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtZXNzYWdlIjoiU3VjZXNzbyBhbyBhdHVhbGl6YXIgc3RhdHVzIGRhcyBy
+        ZXF1aXNpw6fDtWVzIn0=
+    http_version: 
+  recorded_at: Sun, 01 Nov 2015 17:23:47 GMT
+recorded_with: VCR 2.9.3
