@@ -18,7 +18,7 @@ module BsellerRuby
     private
 
     def doc
-      @method =~ /confirm|envia_pedido/ || savon_hash =~ /CallableStatementCallback|PED_CLIENTE|sucesso/ ? savon_hash : xml_parser(savon_hash)
+      @method =~ /confirm|envia_pedido/ || savon_hash =~ /CallableStatementCallback|sucesso/ ? savon_hash : xml_parser(savon_hash)
     end
 
     def xml_parser(xml)

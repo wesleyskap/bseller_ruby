@@ -14,6 +14,10 @@ module BsellerRuby
       call(:confirma_consulta_entrega, params).result
     end
 
+    def self.payment(params)
+      call(:analise_pagamento, params).result
+    end
+
     #def self.sent_purchase
     #end
     #

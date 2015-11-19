@@ -82,18 +82,26 @@ module BsellerRuby
     end
 
     def self.api
-      @api ||= Savon.client wsdl: "#{ws['soap_endpoint']}/CPPedido?wsdl", log: ws['log'], read_timeout: 600, open_timeout: 600 do
+      log "#{ws['soap_endpoint']}/#{get_wsdl}?wsdl"
+      @api ||= Savon.client wsdl: "#{ws['soap_endpoint']}/#{get_wsdl}?wsdl", log: ws['log'], read_timeout: 600, open_timeout: 600 do
         convert_request_keys_to :camelcase
       end
     end
 
+    def self.get_wsdl
+      @method =~ /pagamento/ ? 'CPPagamento' : 'CPPedido'
+    end
     def self.ws
       BsellerRuby.config['ws']
     end
 
     def self.authentication
-      @authentication ||= { 'idCia' => ws['cia_id'], 'usuario' => ws['username'], 'senha' => ws['password'] }
-      @method.to_s.end_with?('pedido') ? {} : @authentication
+      if @method =~ /pagamento/
+        @authentication ||= { 'idCia' => ws['cia_id'], 'credencial' => { 'usuario' => ws['username'], 'senha' => ws['password'] } }
+      else
+        @authentication ||= { 'idCia' => ws['cia_id'], 'usuario' => ws['username'], 'senha' => ws['password'] }
+        @method.to_s.end_with?('pedido') ? {} : @authentication
+      end
     end
   end
 end
