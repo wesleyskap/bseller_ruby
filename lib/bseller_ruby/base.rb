@@ -82,7 +82,6 @@ module BsellerRuby
     end
 
     def self.api
-      log "#{ws['soap_endpoint']}/#{get_wsdl}?wsdl"
       @api ||= Savon.client wsdl: "#{ws['soap_endpoint']}/#{get_wsdl}?wsdl", log: ws['log'], read_timeout: 600, open_timeout: 600 do
         convert_request_keys_to :camelcase
       end

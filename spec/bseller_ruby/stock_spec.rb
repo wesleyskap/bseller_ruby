@@ -70,5 +70,21 @@ describe BsellerRuby::Stock do
         end
       end
     end
+
+    describe ".find" do
+      it 'find an stock' do
+        VCR.use_cassette('stock_find', match_requests_on: [:headers]) do
+          item = BsellerRuby::Stock.find('262261', 'SITE')
+          expect(item).to eql({"codigoDepartamento"=>1, "estoqueEstabelecimento"=>[]})
+        end
+      end
+
+      it 'dont find an stock' do
+        VCR.use_cassette('stock_dont_find', match_requests_on: [:headers]) do
+          item = BsellerRuby::Stock.find('1', 'SITE')
+          expect(item).to eql({"message"=>"Código Terceiro inexistente", "detalheErro"=>nil})
+        end
+      end
+    end
   end
 end

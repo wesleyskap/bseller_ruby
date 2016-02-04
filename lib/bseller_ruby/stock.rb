@@ -25,5 +25,9 @@ module BsellerRuby
     def self.confirm_to_partial_list!(params)
       call(:confirma_consulta_estoque_parcial, params).result
     end
+
+    def self.find(id_item, interface=nil)
+      get("itens/#{id_item}/estoque", interface ? {tpInterface: interface} : nil)
+    end
   end
 end
