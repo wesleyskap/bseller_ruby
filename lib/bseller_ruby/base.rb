@@ -65,8 +65,6 @@ module BsellerRuby
       end
       headers = { accept: 'application/json', content_type: 'application/json', 'X-AUTH-TOKEN' => ws['json_token'] }
       RestClient::Request.execute({ verify_ssl: false, method: method, url: "#{ws['json_endpoint']}/#{path}&api_key=#{ws['json_token']}", headers: headers }.merge(params), &block)
-    rescue => e
-      e
     end
 
     def self.to_params(params)
@@ -90,6 +88,7 @@ module BsellerRuby
     def self.get_wsdl
       @method =~ /pagamento/ ? 'CPPagamento' : 'CPPedido'
     end
+
     def self.ws
       BsellerRuby.config['ws']
     end
