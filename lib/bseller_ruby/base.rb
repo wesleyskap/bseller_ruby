@@ -94,9 +94,7 @@ module BsellerRuby
     end
 
     def self.authentication
-      if @method =~ /pagamento/
-        @authentication ||= { 'idCia' => ws['cia_id'], 'credencial' => { 'usuario' => ws['username'], 'senha' => ws['password'] } }
-      else
+      unless @method =~ /pagamento/
         @authentication ||= { 'idCia' => ws['cia_id'], 'usuario' => ws['username'], 'senha' => ws['password'] }
         @method.to_s.end_with?('pedido') ? {} : @authentication
       end
