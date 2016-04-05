@@ -98,6 +98,7 @@ module BsellerRuby
         @authentication ||= { 'idCia' => ws['cia_id'], 'usuario' => ws['username'], 'senha' => ws['password'] }
         @method.to_s.end_with?('pedido') ? {} : @authentication
       end
+      @authentication || {}
     end
   end
 end
