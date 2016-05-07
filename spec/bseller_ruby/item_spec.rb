@@ -1,6 +1,13 @@
 require 'spec_helper'
 
 describe BsellerRuby::Item do
+  describe 'massive' do
+    it "get massive list" do
+      response = BsellerRuby::Item.massive(tipoInterface: 'b2w')
+      expect(response).to an_instance_of(Hash)
+    end
+  end
+
   describe '.get_list' do
     context 'when is valid' do
       it 'get items list' do

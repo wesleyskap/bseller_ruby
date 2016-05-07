@@ -2,6 +2,33 @@ module BsellerRuby
   class Item < Base
     attr_reader :response
 
+    PATH = "itens"
+
+    # Retorno:
+    # {
+    #   "batchNumber": 0,
+    #   "content": [
+    #     {
+    #       "codigoDepartamento": 0,
+    #       "codigoItem": "string",
+    #       "estoqueEstabelecimento": [
+    #         {
+    #           "codigoEstabelecimento": 0,
+    #           "dataDisponivel": "2016-05-07T19:10:38.803Z",
+    #           "prazoDisponivel": 0,
+    #           "quantidade": 0
+    #         }
+    #       ]
+    #     }
+    #   ],
+    #   "totalElements": 0
+    # }
+    #
+    def self.massive(params)
+      binding.pry
+      get("#{PATH}/massivo", params)
+    end
+
     # <maxReg />: 9(9), Quantidade máxima de registros a ser retornada.
     #                   Se nulo ou zero trás todos os registros disponíveis.
     #
@@ -31,7 +58,7 @@ module BsellerRuby
     #
     #<tpInterface />: X(15), Não, Código do tipo de interface
     def self.find(id_item, interface=nil)
-      get("itens/#{id_item}", interface ? {tpInterface: interface} : nil)
+      get("#{PATH}/#{id_item}", interface ? {tpInterface: interface} : nil)
     end
   end
 end
