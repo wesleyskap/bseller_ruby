@@ -51,7 +51,7 @@ module BsellerRuby
       end
 
       def put(resource, path, payload)
-        execute(:put, "#{resource}/#{path}", body: payload)
+        json_parse(execute(:put, "#{resource}/#{path}?a=1", body: payload))
       end
     end
 

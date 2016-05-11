@@ -75,7 +75,7 @@ describe BsellerRuby::Stock do
       it 'find an stock' do
         VCR.use_cassette('stock_find', match_requests_on: [:headers]) do
           item = BsellerRuby::Stock.find('262261', 'SITE')
-          expect(item).to eql({"codigoDepartamento"=>1, "estoqueEstabelecimento"=>[]})
+          expect(item).to eql({"codigoItem"=>"262261", "codigoDepartamento"=>1, "estoqueEstabelecimento"=>[]})
         end
       end
 

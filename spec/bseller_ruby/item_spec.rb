@@ -3,8 +3,19 @@ require 'spec_helper'
 describe BsellerRuby::Item do
   describe 'massive' do
     it "get massive list" do
-      response = BsellerRuby::Item.massive(tipoInterface: 'b2w')
+      response = BsellerRuby::Item.massive(tipoInterface: 'WAL')
       expect(response).to an_instance_of(Hash)
+    end
+
+    it "put to confirm massive list" do
+      response = BsellerRuby::Item.massive_confirm(batch: '1')
+      expect(response).to an_instance_of(Hash)
+      expect(response["message"]).to eql("Lote confirmado com sucesso")
+    end
+
+    it "put to confirm massive list(2)" do
+      response = BsellerRuby::Item.massive_confirm(batch: 1)
+      expect(response['message']).to eql("Lote confirmado com sucesso")
     end
   end
 
@@ -12,13 +23,13 @@ describe BsellerRuby::Item do
     context 'when is valid' do
       it 'get items list' do
         VCR.use_cassette('item_list_2') do
-          response = BsellerRuby::Item.get_list({'confirmaSN' => 'S', 'tpInterface' => 'B2W', 'maxReg' => '10'})
+          response = BsellerRuby::Item.get_list({'confirmaSN' => 'S', 'tpInterface' => 'WAL', 'maxReg' => '10'})
           expect(response.class).to be(Hash)
           expect(response[:cadastro][:item]).to an_instance_of(Array)
         end
 
         VCR.use_cassette('item_list') do
-          response = BsellerRuby::Item.get_list({'confirmaSN' => 'S', 'tpInterface' => 'B2W', 'maxReg' => '1'})
+          response = BsellerRuby::Item.get_list({'confirmaSN' => 'S', 'tpInterface' => 'WAL', 'maxReg' => '1'})
           expect(response.class).to be(Hash)
           expect(response).to have_key(:cadastro)
           expect(response[:cadastro]).to have_key(:item)

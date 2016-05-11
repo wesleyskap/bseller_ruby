@@ -25,8 +25,11 @@ module BsellerRuby
     # }
     #
     def self.massive(params)
-      binding.pry
       get("#{PATH}/massivo", params)
+    end
+
+    def self.massive_confirm(batch: nil)
+      put("#{PATH}/massivo", batch, nil)
     end
 
     # <maxReg />: 9(9), Quantidade máxima de registros a ser retornada.
@@ -58,7 +61,7 @@ module BsellerRuby
     #
     #<tpInterface />: X(15), Não, Código do tipo de interface
     def self.find(id_item, interface=nil)
-      get("#{PATH}/#{id_item}", interface ? {tpInterface: interface} : nil)
+      get("#{PATH}/#{id_item}", interface)
     end
   end
 end
