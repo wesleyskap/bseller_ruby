@@ -29,7 +29,7 @@ module BsellerRuby
       end
 
       def collection_name
-        @collection_name ||= "#{resource_name}s"
+        @collection_name = "#{resource_name}s"
       end
 
       def call(method, params)
@@ -80,7 +80,7 @@ module BsellerRuby
     end
 
     def self.api
-      @api ||= Savon.client wsdl: "#{ws['soap_endpoint']}/#{get_wsdl}?wsdl", log: ws['log'], read_timeout: 600, open_timeout: 600 do
+      @api = Savon.client wsdl: "#{ws['soap_endpoint']}/#{get_wsdl}?wsdl", log: true, read_timeout: 600, open_timeout: 600 do
         convert_request_keys_to :camelcase
       end
     end
@@ -95,7 +95,7 @@ module BsellerRuby
 
     def self.authentication
       unless @method =~ /pagamento/
-        @authentication ||= { 'idCia' => ws['cia_id'], 'usuario' => ws['username'], 'senha' => ws['password'] }
+        @authentication = { 'idCia' => ws['cia_id'], 'usuario' => ws['username'], 'senha' => ws['password'] }
         @method.to_s.end_with?('pedido') ? {} : @authentication
       end
       @authentication || {}
