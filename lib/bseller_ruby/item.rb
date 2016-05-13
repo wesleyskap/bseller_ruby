@@ -61,7 +61,7 @@ module BsellerRuby
     #
     #<tpInterface />: X(15), Não, Código do tipo de interface
     def self.find(id_item, interface=nil)
-      get("#{PATH}/#{id_item}", interface)
+      get("#{PATH}/#{id_item}", interface ? {tpInterface: interface} : ni)
     end
   end
 end
