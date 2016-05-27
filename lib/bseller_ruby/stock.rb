@@ -2,6 +2,35 @@ module BsellerRuby
   class Stock < Base
     attr_reader :response
 
+    PATH = "itens/estoque"
+
+    # {
+    #   "batchNumber": 0,
+    #   "content": [
+    #     {
+    #       "codigoDepartamento": 0,
+    #       "codigoItem": "string",
+    #       "estoqueEstabelecimento": [
+    #         {
+    #           "codigoEstabelecimento": 0,
+    #           "dataDisponivel": "2016-05-27T17:00:49.906Z",
+    #           "prazoDisponivel": 0,
+    #           "quantidade": 0
+    #         }
+    #       ]
+    #     }
+    #   ],
+    #   "totalElements": 0
+    # }
+    #
+    def self.massive(params)
+      get("#{PATH}/massivo", params)
+    end
+
+    def self.massive_confirm(batch: nil)
+      put("#{PATH}/massivo", batch, nil)
+    end
+
     # <confirmaSN />: X(1), Informa se a consulta foi recebida e processada corretamente
     #                       S – Recebida e processada corretamente
     #                       N – Não foi recebida ou processada corretamente. Na próxima

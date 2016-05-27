@@ -1,0 +1,606 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/api/itens/massivo?api_key=2290A89AA7C7493AE0536AF3A8C05E17&tipoInterface=WA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Fri, 27 May 2016 18:19:44 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb250ZW50IjpbeyJjb2RpZ29JdGVtIjoiMzMzNjg4IiwiY29kaWdvVGVy
+        Y2Vpcm8iOiIxMjk3OTMiLCJjb2RpZ29Gb3JuZWNlZG9yIjoiOTc4ODUyNDkw
+        ODUyMSIsIm5vbWUiOiJBdXRvbm9taWEgRGEgRXNjb2xhIEEgKEV4KVRlbnPD
+        o28gRG8gVGVtYSBOYXMgUG9sw610aWNhcyBQw7pibGljYXMiLCJ0aXR1bG8i
+        OiJBdXRvbm9taWEgRGEgRXNjb2xhIEEgKEV4KVRlbnPDo28gRG8gVGVtYSBO
+        YXMgUG9sw610aWNhcyBQw7pibGljYXMiLCJkZXNjcmljYW8iOiJTdW3DoXJp
+        byAtIENhcMOtdHVsbyBJIC0gQXV0b25vbWlhIC0gbyBjb25jZWl0byAtIENh
+        cMOtdHVsbyBJSSAtIEEgZ2VzdMOjbyBkYXMgcG9sw610aWNhcyBww7pibGlj
+        YXMgLSBjb250cm92w6lyc2lhcyBlbSB0b3JubyBkYSBpbnN0cnVtZW50YWxp
+        emHDp8OjbyBkb3MgY29uY2VpdG9zIGRlIGF1dG9ub21pYSBlIGRlc2NlbnRy
+        YWxpemHDp8OjbyAtIENhcMOtdHVsbyBJSUkgLSBBdXRvbm9taWEgZS9vdSBk
+        ZXNjZW50cmFsaXphw6fDo28/QSAoZXgpdGVuc8OjbyBkbyB0ZW1hIG5hIGFn
+        ZW5kYSBkYXMgcG9sw610aWNhcyBlZHVjYWNpb25haXMgLSBCaWJsaW9ncmFm
+        aWEuIiwibWFyY2EiOiJDT1JURVoiLCJzaXR1YWNhbyI6IkEiLCJkYXRhQ2Fk
+        YXN0cm8iOiIyMDE1LTEwLTE2VDE1OjA2OjQ2LjAwMC0wNDowMCIsImRhdGFB
+        dHVhbGl6YWNhb0NhZGFzdHJvIjoiMjAxNS0xMC0yNlQxNTo1MTo1My4wMDAt
+        MDQ6MDAiLCJvcGVyYWNhbyI6IkEiLCJpdGVtUGFpIjpmYWxzZSwiY29kaWdv
+        SXRlbVBhaSI6bnVsbCwiYnJpbmRlIjpmYWxzZSwidGlwb0l0ZW0iOiJQIiwi
+        aXRlbVZpcnR1YWwiOnsidGlwb0l0ZW1WaXJ0dWFsIjpudWxsLCJpdGVtRmlz
+        aWNvIjpmYWxzZSwicHJhem9WYWxpZGFkZUdhcmFudGlhIjpudWxsLCJ0aXBv
+        R2FyYW50aWEiOm51bGx9LCJwcmF6b0dhcmFudGlhRm9ybmVjZWRvciI6bnVs
+        bCwidGlwb1RyYW5zcG9ydGUiOnsiaWQiOjEsIm5vbWUiOiJMZXZlIn0sInVu
+        aWRhZGVNZWRpZGEiOnsiaWQiOiJVTiIsIm5vbWUiOiJVbmlkYWRlIn0sIm9r
+        RmlzY2FsIjp0cnVlLCJ2ZW5kYXZlbCI6dHJ1ZSwiY29udHJvbGFWZW5kYSI6
+        dHJ1ZSwiZXN0cnV0dXJhTWVyY2Fkb2xvZ2ljYSI6eyJkZXBhcnRhbWVudG8i
+        OnsiaWQiOjEsIm5vbWUiOiJMaXZyb3MifSwic2V0b3IiOnsiaWQiOjE5LCJu
+        b21lIjoiRWR1Y2HDp8OjbyBlIFBlZGFnb2dpYSJ9LCJmYW1pbGlhIjp7Imlk
+        Ijo4LCJub21lIjoiUGVkYWdvZ2lhIn0sInN1YkZhbWlsaWEiOnsiaWQiOjgs
+        Im5vbWUiOiJQZWRhZ29naWEifX0sImRhdGFMYW5jYW1lbnRvIjoiMjAwMi0w
+        MS0wMVQwMDowMDowMC4wMDAtMDU6MDAiLCJxdWFudGlkYWRlUHJldmVuZGEi
+        Om51bGwsImRpbWVuc29lcyI6eyJhbHR1cmEiOjAuMjEsImxhcmd1cmEiOjAu
+        MTQsImNvbXByaW1lbnRvIjowLjAwOH0sInBlc28iOnsidW5pdGFyaW8iOjAu
+        MTg2LCJicnV0byI6MC4xODZ9LCJlYW4iOlt7ImNvZEVhbiI6OTc4ODUyNDkw
+        ODUyMX1dLCJjb21wb25lbnRlc0tpdCI6W10sImZpY2hhVGVjbmljYSI6W3si
+        c2VxdWVuY2lhbCI6MSwiY2hhdmUiOnsiaWQiOjEsIm5vbWUiOiJUaXBvIGRl
+        IHByb2R1dG8iLCJ2YWxvciI6IkxpdnJvIn0sIm9yZGVtIjoxLCJ2aXNpdmVs
+        Ijp0cnVlLCJmaWx0cm8iOnRydWUsInNpdHVhY2FvIjoiQSJ9LHsic2VxdWVu
+        Y2lhbCI6MiwiY2hhdmUiOnsiaWQiOjIsIm5vbWUiOiJBdXRvciIsInZhbG9y
+        IjoiTUFSVElOUywgQU5HRUxBIE1BUklBIn0sIm9yZGVtIjoyLCJ2aXNpdmVs
+        Ijp0cnVlLCJmaWx0cm8iOnRydWUsInNpdHVhY2FvIjoiQSJ9LHsic2VxdWVu
+        Y2lhbCI6MywiY2hhdmUiOnsiaWQiOjYsIm5vbWUiOiJJZGlvbWEiLCJ2YWxv
+        ciI6IlBvcnR1Z3VlcyJ9LCJvcmRlbSI6MywidmlzaXZlbCI6dHJ1ZSwiZmls
+        dHJvIjp0cnVlLCJzaXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjQsImNo
+        YXZlIjp7ImlkIjo3LCJub21lIjoiUGHDrXMiLCJ2YWxvciI6IjAifSwib3Jk
+        ZW0iOjQsInZpc2l2ZWwiOnRydWUsImZpbHRybyI6dHJ1ZSwic2l0dWFjYW8i
+        OiJBIn0seyJzZXF1ZW5jaWFsIjo1LCJjaGF2ZSI6eyJpZCI6OSwibm9tZSI6
+        IlDDoWdpbmFzIiwidmFsb3IiOiIxNDQifSwib3JkZW0iOjUsInZpc2l2ZWwi
+        OnRydWUsImZpbHRybyI6ZmFsc2UsInNpdHVhY2FvIjoiQSJ9LHsic2VxdWVu
+        Y2lhbCI6NiwiY2hhdmUiOnsiaWQiOjEwLCJub21lIjoiQW5vIiwidmFsb3Ii
+        OiIyMDAyIn0sIm9yZGVtIjo2LCJ2aXNpdmVsIjp0cnVlLCJmaWx0cm8iOnRy
+        dWUsInNpdHVhY2FvIjoiQSJ9LHsic2VxdWVuY2lhbCI6NywiY2hhdmUiOnsi
+        aWQiOjExLCJub21lIjoiRWRpw6fDo28iLCJ2YWxvciI6IjEifSwib3JkZW0i
+        OjcsInZpc2l2ZWwiOnRydWUsImZpbHRybyI6ZmFsc2UsInNpdHVhY2FvIjoi
+        QSJ9LHsic2VxdWVuY2lhbCI6OCwiY2hhdmUiOnsiaWQiOjEzLCJub21lIjoi
+        Vm9sdW1lIiwidmFsb3IiOiIwIn0sIm9yZGVtIjo4LCJ2aXNpdmVsIjp0cnVl
+        LCJmaWx0cm8iOmZhbHNlLCJzaXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwi
+        OjksImNoYXZlIjp7ImlkIjoxNCwibm9tZSI6IkVuY2FkZXJuYcOnw6NvIiwi
+        dmFsb3IiOm51bGx9LCJvcmRlbSI6OSwidmlzaXZlbCI6dHJ1ZSwiZmlsdHJv
+        Ijp0cnVlLCJzaXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjEwLCJjaGF2
+        ZSI6eyJpZCI6MTUsIm5vbWUiOiJTdGF0dXMiLCJ2YWxvciI6Ik5PUk1BTCJ9
+        LCJvcmRlbSI6MTAsInZpc2l2ZWwiOnRydWUsImZpbHRybyI6dHJ1ZSwic2l0
+        dWFjYW8iOiJBIn0seyJzZXF1ZW5jaWFsIjoxMSwiY2hhdmUiOnsiaWQiOjMw
+        LCJub21lIjoiRGF0YSBwdWJsaWNhw6fDo28iLCJ2YWxvciI6IjAxLzAxLzIw
+        MDIifSwib3JkZW0iOjExLCJ2aXNpdmVsIjp0cnVlLCJmaWx0cm8iOnRydWUs
+        InNpdHVhY2FvIjoiQSJ9LHsic2VxdWVuY2lhbCI6MTIsImNoYXZlIjp7Imlk
+        IjozMSwibm9tZSI6IkNvbWVyY2lhbGl6YWRvIiwidmFsb3IiOiJTIn0sIm9y
+        ZGVtIjoxMiwidmlzaXZlbCI6ZmFsc2UsImZpbHRybyI6ZmFsc2UsInNpdHVh
+        Y2FvIjoiQSJ9LHsic2VxdWVuY2lhbCI6MTMsImNoYXZlIjp7ImlkIjozMiwi
+        bm9tZSI6IkxpbmsiLCJ2YWxvciI6Imh0dHA6Ly9pbWFnZW5zLmlzdXBwbHku
+        Y29tLmJyLzUyMS9vcmkvOTc4ODUyNDkwODUyMS5qcGcifSwib3JkZW0iOjEz
+        LCJ2aXNpdmVsIjpmYWxzZSwiZmlsdHJvIjpmYWxzZSwic2l0dWFjYW8iOiJB
+        In0seyJzZXF1ZW5jaWFsIjoxNCwiY2hhdmUiOnsiaWQiOjE3LCJub21lIjoi
+        SVNCTiIsInZhbG9yIjoiODUyNDkwODUyMSJ9LCJvcmRlbSI6MTQsInZpc2l2
+        ZWwiOnRydWUsImZpbHRybyI6dHJ1ZSwic2l0dWFjYW8iOiJBIn0seyJzZXF1
+        ZW5jaWFsIjoxNSwiY2hhdmUiOnsiaWQiOjIxLCJub21lIjoiUE9EIiwidmFs
+        b3IiOiJOIn0sIm9yZGVtIjoxNSwidmlzaXZlbCI6ZmFsc2UsImZpbHRybyI6
+        dHJ1ZSwic2l0dWFjYW8iOiJBIn1dLCJjYXRlZ29yaWFzIjpbXSwidmFyaWFj
+        b2VzIjpbXSwicHJlY28iOltdLCJ0YWdzIjpudWxsLCJuY20iOnsiY29kaWdv
+        TmNtIjo0OTAxOTkwMCwic2VxdWVuY2lhbCI6MCwiZGVzY3JpY2FvIjoiT1VU
+        Uk9TIExJVlJPUywgQlJPQ0hVUkFTIEVcdElNUFJFU1NPUyBTRU1FTEhBTlRF
+        UyJ9LCJwcm9jZWRlbmNpYSI6eyJpZCI6MCwibm9tZSI6Ik5hY2lvbmFsIn19
+        LHsiY29kaWdvSXRlbSI6IjI5NzM3OCIsImNvZGlnb1RlcmNlaXJvIjoiMTU1
+        NzczIiwiY29kaWdvRm9ybmVjZWRvciI6Ijk3ODg1NzY4MzE3MzAiLCJub21l
+        IjoiTWFuZGFsYXMgRGUgQm9sc28gNCIsInRpdHVsbyI6Ik1hbmRhbGFzIERl
+        IEJvbHNvIDQiLCJkZXNjcmljYW8iOiIxIEV4cHJlc3PDo28gbWlsZW5hciBk
+        YSBjdWx0dXJhIG9yaWVudGFsLCBtYW5kYWxhcyBzw6NvIGRpYWdyYW1hcyBj
+        b25jw6pudHJpY29zIHF1ZSByZXByZXNlbnRhbSBhIHRvdGFsaWRhZGUgZGEg
+        dmlkYSwgdW1hIHPDrW50ZXNlIGRvIHNlciBodW1hbm8gZSBkbyB1bml2ZXJz
+        byBlbSBxdWUgZWxlIGVzdMOhIGluc2VyaWRvLiBNdWl0byB1dGlsaXphZGFz
+        IG5hcyBwcsOhdGljYXMgaGluZHVzIGUgYnVkaXN0YXMsIGFzIG1hbmRhbGFz
+        IHTDqm0gYXRyYcOtZG8gY2FkYSB2ZXogbWFpcyBpbnRlcmVzc2Ugbm8gT2Np
+        ZGVudGUuIE8gYXRvIGRlIGNvbG9yaXIgbWFuZGFsYXMgcHJvcG9yY2lvbmEg
+        dW0gYmVuZWbDrWNpbyBkdXBsbzogZXN0aW11bGEgYSBleHBsb3Jhw6fDo28g
+        ZG8gbXVuZG8gZXh0ZXJpb3IgYSBwYXJ0aXIgZGUgdW0gbm92byBwb250byBk
+        ZSB2aXN0YSBlLCBzaW11bHRhbmVhbWVudGUsIHJlb3JnYW5pemEgbyBlc3Rh
+        ZG8gaW50ZXJpb3IsIGxldmFuZG8gw6AgaW50cm9zcGVjw6fDo28gZSBhbyBl
+        cXVpbMOtYnJpby4iLCJtYXJjYSI6IlZFUkdBUkEgJiBSSUJBIiwic2l0dWFj
+        YW8iOiJBIiwiZGF0YUNhZGFzdHJvIjoiMjAxNS0xMC0xNVQxMjozNzoyOS4w
+        MDAtMDQ6MDAiLCJkYXRhQXR1YWxpemFjYW9DYWRhc3RybyI6IjIwMTYtMDUt
+        MTlUMTc6MTY6MDguMDAwLTA0OjAwIiwib3BlcmFjYW8iOiJBIiwiaXRlbVBh
+        aSI6ZmFsc2UsImNvZGlnb0l0ZW1QYWkiOm51bGwsImJyaW5kZSI6ZmFsc2Us
+        InRpcG9JdGVtIjoiUCIsIml0ZW1WaXJ0dWFsIjp7InRpcG9JdGVtVmlydHVh
+        bCI6bnVsbCwiaXRlbUZpc2ljbyI6ZmFsc2UsInByYXpvVmFsaWRhZGVHYXJh
+        bnRpYSI6bnVsbCwidGlwb0dhcmFudGlhIjpudWxsfSwicHJhem9HYXJhbnRp
+        YUZvcm5lY2Vkb3IiOm51bGwsInRpcG9UcmFuc3BvcnRlIjp7ImlkIjoxLCJu
+        b21lIjoiTGV2ZSJ9LCJ1bmlkYWRlTWVkaWRhIjp7ImlkIjoiVU4iLCJub21l
+        IjoiVW5pZGFkZSJ9LCJva0Zpc2NhbCI6dHJ1ZSwidmVuZGF2ZWwiOnRydWUs
+        ImNvbnRyb2xhVmVuZGEiOnRydWUsImVzdHJ1dHVyYU1lcmNhZG9sb2dpY2Ei
+        OnsiZGVwYXJ0YW1lbnRvIjp7ImlkIjoxLCJub21lIjoiTGl2cm9zIn0sInNl
+        dG9yIjp7ImlkIjoyMiwibm9tZSI6IkVzb3RlcmlzbW8ifSwiZmFtaWxpYSI6
+        eyJpZCI6NCwibm9tZSI6IkVzb3RlcmlzbW8ifSwic3ViRmFtaWxpYSI6eyJp
+        ZCI6NCwibm9tZSI6IkVzb3RlcmlzbW8ifX0sImRhdGFMYW5jYW1lbnRvIjoi
+        MjAwOC0wMS0wMVQwMDowMDowMC4wMDAtMDU6MDAiLCJxdWFudGlkYWRlUHJl
+        dmVuZGEiOm51bGwsImRpbWVuc29lcyI6eyJhbHR1cmEiOjAuMTQsImxhcmd1
+        cmEiOjAuMTQsImNvbXByaW1lbnRvIjowLjAxNn0sInBlc28iOnsidW5pdGFy
+        aW8iOjAuMTgxLCJicnV0byI6MC4xODF9LCJlYW4iOlt7ImNvZEVhbiI6OTc4
+        ODU3NjgzMTczMH1dLCJjb21wb25lbnRlc0tpdCI6W10sImZpY2hhVGVjbmlj
+        YSI6W3sic2VxdWVuY2lhbCI6MSwiY2hhdmUiOnsiaWQiOjEsIm5vbWUiOiJU
+        aXBvIGRlIHByb2R1dG8iLCJ2YWxvciI6IkxpdnJvIn0sIm9yZGVtIjoxLCJ2
+        aXNpdmVsIjp0cnVlLCJmaWx0cm8iOnRydWUsInNpdHVhY2FvIjoiQSJ9LHsi
+        c2VxdWVuY2lhbCI6MiwiY2hhdmUiOnsiaWQiOjIsIm5vbWUiOiJBdXRvciIs
+        InZhbG9yIjoiVklEQUwsIE1PTlRTRVJSQVQifSwib3JkZW0iOjIsInZpc2l2
+        ZWwiOnRydWUsImZpbHRybyI6dHJ1ZSwic2l0dWFjYW8iOiJBIn0seyJzZXF1
+        ZW5jaWFsIjozLCJjaGF2ZSI6eyJpZCI6Niwibm9tZSI6IklkaW9tYSIsInZh
+        bG9yIjoiUE9SVFVHVcOKUyJ9LCJvcmRlbSI6MywidmlzaXZlbCI6dHJ1ZSwi
+        ZmlsdHJvIjp0cnVlLCJzaXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjQs
+        ImNoYXZlIjp7ImlkIjo3LCJub21lIjoiUGHDrXMiLCJ2YWxvciI6IjAifSwi
+        b3JkZW0iOjQsInZpc2l2ZWwiOnRydWUsImZpbHRybyI6dHJ1ZSwic2l0dWFj
+        YW8iOiJBIn0seyJzZXF1ZW5jaWFsIjo1LCJjaGF2ZSI6eyJpZCI6OSwibm9t
+        ZSI6IlDDoWdpbmFzIiwidmFsb3IiOiI0OCJ9LCJvcmRlbSI6NSwidmlzaXZl
+        bCI6dHJ1ZSwiZmlsdHJvIjpmYWxzZSwic2l0dWFjYW8iOiJBIn0seyJzZXF1
+        ZW5jaWFsIjo2LCJjaGF2ZSI6eyJpZCI6MTAsIm5vbWUiOiJBbm8iLCJ2YWxv
+        ciI6IjIwMDgifSwib3JkZW0iOjYsInZpc2l2ZWwiOnRydWUsImZpbHRybyI6
+        dHJ1ZSwic2l0dWFjYW8iOiJBIn0seyJzZXF1ZW5jaWFsIjo3LCJjaGF2ZSI6
+        eyJpZCI6MTEsIm5vbWUiOiJFZGnDp8OjbyIsInZhbG9yIjoiMiJ9LCJvcmRl
+        bSI6NywidmlzaXZlbCI6dHJ1ZSwiZmlsdHJvIjpmYWxzZSwic2l0dWFjYW8i
+        OiJBIn0seyJzZXF1ZW5jaWFsIjo4LCJjaGF2ZSI6eyJpZCI6MTMsIm5vbWUi
+        OiJWb2x1bWUiLCJ2YWxvciI6IjAifSwib3JkZW0iOjgsInZpc2l2ZWwiOnRy
+        dWUsImZpbHRybyI6ZmFsc2UsInNpdHVhY2FvIjoiQSJ9LHsic2VxdWVuY2lh
+        bCI6OSwiY2hhdmUiOnsiaWQiOjE0LCJub21lIjoiRW5jYWRlcm5hw6fDo28i
+        LCJ2YWxvciI6IkJST0NIVVJBIn0sIm9yZGVtIjo5LCJ2aXNpdmVsIjp0cnVl
+        LCJmaWx0cm8iOnRydWUsInNpdHVhY2FvIjoiQSJ9LHsic2VxdWVuY2lhbCI6
+        MTAsImNoYXZlIjp7ImlkIjoxNSwibm9tZSI6IlN0YXR1cyIsInZhbG9yIjoi
+        Tk9STUFMIn0sIm9yZGVtIjoxMCwidmlzaXZlbCI6dHJ1ZSwiZmlsdHJvIjp0
+        cnVlLCJzaXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjExLCJjaGF2ZSI6
+        eyJpZCI6MzAsIm5vbWUiOiJEYXRhIHB1YmxpY2HDp8OjbyIsInZhbG9yIjoi
+        MDEvMDEvMjAwOCJ9LCJvcmRlbSI6MTEsInZpc2l2ZWwiOnRydWUsImZpbHRy
+        byI6dHJ1ZSwic2l0dWFjYW8iOiJBIn0seyJzZXF1ZW5jaWFsIjoxMiwiY2hh
+        dmUiOnsiaWQiOjMxLCJub21lIjoiQ29tZXJjaWFsaXphZG8iLCJ2YWxvciI6
+        IlMifSwib3JkZW0iOjEyLCJ2aXNpdmVsIjpmYWxzZSwiZmlsdHJvIjpmYWxz
+        ZSwic2l0dWFjYW8iOiJBIn0seyJzZXF1ZW5jaWFsIjoxMywiY2hhdmUiOnsi
+        aWQiOjMyLCJub21lIjoiTGluayIsInZhbG9yIjoiaHR0cDovL2ltYWdlbnMu
+        aXN1cHBseS5jb20uYnIvNzMwL29yaS85Nzg4NTc2ODMxNzMwLmpwZyJ9LCJv
+        cmRlbSI6MTMsInZpc2l2ZWwiOmZhbHNlLCJmaWx0cm8iOmZhbHNlLCJzaXR1
+        YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjE0LCJjaGF2ZSI6eyJpZCI6MTcs
+        Im5vbWUiOiJJU0JOIiwidmFsb3IiOiI4NTc2ODMxNzMyIn0sIm9yZGVtIjox
+        NCwidmlzaXZlbCI6dHJ1ZSwiZmlsdHJvIjp0cnVlLCJzaXR1YWNhbyI6IkEi
+        fSx7InNlcXVlbmNpYWwiOjE1LCJjaGF2ZSI6eyJpZCI6MjEsIm5vbWUiOiJQ
+        T0QiLCJ2YWxvciI6Ik4ifSwib3JkZW0iOjE1LCJ2aXNpdmVsIjpmYWxzZSwi
+        ZmlsdHJvIjp0cnVlLCJzaXR1YWNhbyI6IkEifV0sImNhdGVnb3JpYXMiOltd
+        LCJ2YXJpYWNvZXMiOltdLCJwcmVjbyI6W10sInRhZ3MiOm51bGwsIm5jbSI6
+        eyJjb2RpZ29OY20iOjQ5MDE5OTAwLCJzZXF1ZW5jaWFsIjowLCJkZXNjcmlj
+        YW8iOiJPVVRST1MgTElWUk9TLCBCUk9DSFVSQVMgRVx0SU1QUkVTU09TIFNF
+        TUVMSEFOVEVTIn0sInByb2NlZGVuY2lhIjp7ImlkIjowLCJub21lIjoiTmFj
+        aW9uYWwifX0seyJjb2RpZ29JdGVtIjoiNDA4MzU1IiwiY29kaWdvVGVyY2Vp
+        cm8iOiIyNDE1NjYiLCJjb2RpZ29Gb3JuZWNlZG9yIjoiOTc4ODU3Njg2MTQw
+        OSIsIm5vbWUiOiJEaWFyaW8gRGUgVW1hIEdhcm90YSBOYWRhIFBvcHVsYXI6
+        IEhpc3RvcmlhcyBEZSBVbWEgQmFsYWRlaXJhIE5lbSBVbSBQb3VjbyBHbGFt
+        b3Vyb3NhIC0gVm9sdW1lIDIiLCJ0aXR1bG8iOiJEaWFyaW8gRGUgVW1hIEdh
+        cm90YSBOYWRhIFBvcHVsYXI6IEhpc3RvcmlhcyBEZSBVbWEgQmFsYWRlaXJh
+        IE5lbSBVbSBQb3VjbyBHbGFtb3Vyb3NhIC0gVm9sdW1lIDIiLCJkZXNjcmlj
+        YW8iOiIxIEFjb3N0dW1hZGEgY29tIGEgbm92YSBlc2NvbGEgZSB0ZW5kbyBk
+        dWFzIG1lbGhvcmVzIGFtaWdhcyBwb3IgcGVydG8sIGEgdmlkYSBlc3TDoSBt
+        ZWxob3JhbmRvIHBhcmEgTmlra2kgTWF4d2VsbCwgcHJpbmNpcGFsbWVudGUg
+        ZGVwb2lzIHF1ZSBCcmFuZG9uLCBzdWEgcGFpeMOjbyBzZWNyZXRhLCBhIGNv
+        bnZpZG91IHBhcmEgc2VyIHN1YSBwYXJjZWlyYSBkZSBsYWJvcmF0w7NyaW8u
+        IE5vIGVudGFudG8sIHF1YW5kbyBvdXZlIGEgbWVuaW5hIG3DoSBkbyBjb2zD
+        qWdpbywgTWFjS2VuemllLCBkaXplciBxdWUgc2Vyw6EgbyBwYXIgZGUgQnJh
+        bmRvbiBuYSBmZXN0YSBkZSBIYWxsb3dlZW4sIE5pa2tpIGZpY2EgZGVjZXBj
+        aW9uYWRhIGUgYWNlaXRhIHBhc3NhciBhIGRhdGEgYWp1ZGFuZG8gbmEgZmVz
+        dGluaGEgZGUgc3VhIGlybcOjIG1haXMgbm92YSwgQnJpYW5uYS4gQXDDs3Mg
+        ZGVzY29icmlyIHF1ZSBNYWNLZW56aWUgZXN0YXZhIG1lbnRpbmRvIGUgcXVl
+        IHNldSBzb25obyBkZSBpciDDoCBmZXN0YSBjb20gQnJhbmRvbiBwb2RlIHNl
+        IHRvcm5hciByZWFsaWRhZGUsIE5pa2tpIHBlcmNlYmUgcXVlIHRlcsOhIGRl
+        IHNlIHJldmV6YXIgZW50cmUgb3MgZG9pcyBldmVudG9zLCBzZW0gYXRyYXBh
+        bGhhciBzdWEgcmVsYcOnw6NvIGNvbSBxdWFpc3F1ZXIgcGFydGVzLiIsIm1h
+        cmNhIjoiVkVSVVMiLCJzaXR1YWNhbyI6IkEiLCJkYXRhQ2FkYXN0cm8iOiIy
+        MDE1LTEwLTE5VDExOjAyOjA1LjAwMC0wNDowMCIsImRhdGFBdHVhbGl6YWNh
+        b0NhZGFzdHJvIjoiMjAxNi0wNS0xOVQxNzoxNjoyNS4wMDAtMDQ6MDAiLCJv
+        cGVyYWNhbyI6IkEiLCJpdGVtUGFpIjpmYWxzZSwiY29kaWdvSXRlbVBhaSI6
+        bnVsbCwiYnJpbmRlIjpmYWxzZSwidGlwb0l0ZW0iOiJQIiwiaXRlbVZpcnR1
+        YWwiOnsidGlwb0l0ZW1WaXJ0dWFsIjpudWxsLCJpdGVtRmlzaWNvIjpmYWxz
+        ZSwicHJhem9WYWxpZGFkZUdhcmFudGlhIjpudWxsLCJ0aXBvR2FyYW50aWEi
+        Om51bGx9LCJwcmF6b0dhcmFudGlhRm9ybmVjZWRvciI6bnVsbCwidGlwb1Ry
+        YW5zcG9ydGUiOnsiaWQiOjEsIm5vbWUiOiJMZXZlIn0sInVuaWRhZGVNZWRp
+        ZGEiOnsiaWQiOiJVTiIsIm5vbWUiOiJVbmlkYWRlIn0sIm9rRmlzY2FsIjp0
+        cnVlLCJ2ZW5kYXZlbCI6dHJ1ZSwiY29udHJvbGFWZW5kYSI6dHJ1ZSwiZXN0
+        cnV0dXJhTWVyY2Fkb2xvZ2ljYSI6eyJkZXBhcnRhbWVudG8iOnsiaWQiOjEs
+        Im5vbWUiOiJMaXZyb3MifSwic2V0b3IiOnsiaWQiOjMyLCJub21lIjoiTGl0
+        ZXJhdHVyYSBJbmZhbnRvanV2ZW5pbCJ9LCJmYW1pbGlhIjp7ImlkIjo3LCJu
+        b21lIjoiTGl0ZXJhdHVyYSBJbmZhbnRvanV2ZW5pbCJ9LCJzdWJGYW1pbGlh
+        Ijp7ImlkIjo3LCJub21lIjoiTGl0ZXJhdHVyYSBJbmZhbnRvanV2ZW5pbCJ9
+        fSwiZGF0YUxhbmNhbWVudG8iOiIyMDExLTAxLTAxVDAwOjAwOjAwLjAwMC0w
+        NTowMCIsInF1YW50aWRhZGVQcmV2ZW5kYSI6bnVsbCwiZGltZW5zb2VzIjp7
+        ImFsdHVyYSI6MC4yMSwibGFyZ3VyYSI6MC4xNCwiY29tcHJpbWVudG8iOjAu
+        MDAxfSwicGVzbyI6eyJ1bml0YXJpbyI6MC41LCJicnV0byI6MC41fSwiZWFu
+        IjpbeyJjb2RFYW4iOjk3ODg1NzY4NjE0MDl9XSwiY29tcG9uZW50ZXNLaXQi
+        OltdLCJmaWNoYVRlY25pY2EiOlt7InNlcXVlbmNpYWwiOjEsImNoYXZlIjp7
+        ImlkIjoxLCJub21lIjoiVGlwbyBkZSBwcm9kdXRvIiwidmFsb3IiOiJMaXZy
+        byJ9LCJvcmRlbSI6MSwidmlzaXZlbCI6dHJ1ZSwiZmlsdHJvIjp0cnVlLCJz
+        aXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjIsImNoYXZlIjp7ImlkIjoy
+        LCJub21lIjoiQXV0b3IiLCJ2YWxvciI6IlJVU1NFTEwsIFJBQ0hFTCBSRU5F
+        RSJ9LCJvcmRlbSI6MiwidmlzaXZlbCI6dHJ1ZSwiZmlsdHJvIjp0cnVlLCJz
+        aXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjMsImNoYXZlIjp7ImlkIjo2
+        LCJub21lIjoiSWRpb21hIiwidmFsb3IiOiJQT1JUVUdVw4pTIn0sIm9yZGVt
+        IjozLCJ2aXNpdmVsIjp0cnVlLCJmaWx0cm8iOnRydWUsInNpdHVhY2FvIjoi
+        QSJ9LHsic2VxdWVuY2lhbCI6NCwiY2hhdmUiOnsiaWQiOjcsIm5vbWUiOiJQ
+        YcOtcyIsInZhbG9yIjoiMCJ9LCJvcmRlbSI6NCwidmlzaXZlbCI6dHJ1ZSwi
+        ZmlsdHJvIjp0cnVlLCJzaXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjUs
+        ImNoYXZlIjp7ImlkIjo5LCJub21lIjoiUMOhZ2luYXMiLCJ2YWxvciI6IjI3
+        OSJ9LCJvcmRlbSI6NSwidmlzaXZlbCI6dHJ1ZSwiZmlsdHJvIjpmYWxzZSwi
+        c2l0dWFjYW8iOiJBIn0seyJzZXF1ZW5jaWFsIjo2LCJjaGF2ZSI6eyJpZCI6
+        MTAsIm5vbWUiOiJBbm8iLCJ2YWxvciI6IjIwMTEifSwib3JkZW0iOjYsInZp
+        c2l2ZWwiOnRydWUsImZpbHRybyI6dHJ1ZSwic2l0dWFjYW8iOiJBIn0seyJz
+        ZXF1ZW5jaWFsIjo3LCJjaGF2ZSI6eyJpZCI6MTEsIm5vbWUiOiJFZGnDp8Oj
+        byIsInZhbG9yIjoiMSJ9LCJvcmRlbSI6NywidmlzaXZlbCI6dHJ1ZSwiZmls
+        dHJvIjpmYWxzZSwic2l0dWFjYW8iOiJBIn0seyJzZXF1ZW5jaWFsIjo4LCJj
+        aGF2ZSI6eyJpZCI6MTMsIm5vbWUiOiJWb2x1bWUiLCJ2YWxvciI6IjIifSwi
+        b3JkZW0iOjgsInZpc2l2ZWwiOnRydWUsImZpbHRybyI6ZmFsc2UsInNpdHVh
+        Y2FvIjoiQSJ9LHsic2VxdWVuY2lhbCI6OSwiY2hhdmUiOnsiaWQiOjE0LCJu
+        b21lIjoiRW5jYWRlcm5hw6fDo28iLCJ2YWxvciI6IkJST0NIVVJBIn0sIm9y
+        ZGVtIjo5LCJ2aXNpdmVsIjp0cnVlLCJmaWx0cm8iOnRydWUsInNpdHVhY2Fv
+        IjoiQSJ9LHsic2VxdWVuY2lhbCI6MTAsImNoYXZlIjp7ImlkIjoxNSwibm9t
+        ZSI6IlN0YXR1cyIsInZhbG9yIjoiTk9STUFMIn0sIm9yZGVtIjoxMCwidmlz
+        aXZlbCI6dHJ1ZSwiZmlsdHJvIjp0cnVlLCJzaXR1YWNhbyI6IkEifSx7InNl
+        cXVlbmNpYWwiOjExLCJjaGF2ZSI6eyJpZCI6MzAsIm5vbWUiOiJEYXRhIHB1
+        YmxpY2HDp8OjbyIsInZhbG9yIjoiMDEvMDEvMjAxMSJ9LCJvcmRlbSI6MTEs
+        InZpc2l2ZWwiOnRydWUsImZpbHRybyI6dHJ1ZSwic2l0dWFjYW8iOiJBIn0s
+        eyJzZXF1ZW5jaWFsIjoxMiwiY2hhdmUiOnsiaWQiOjMxLCJub21lIjoiQ29t
+        ZXJjaWFsaXphZG8iLCJ2YWxvciI6IlMifSwib3JkZW0iOjEyLCJ2aXNpdmVs
+        IjpmYWxzZSwiZmlsdHJvIjpmYWxzZSwic2l0dWFjYW8iOiJBIn0seyJzZXF1
+        ZW5jaWFsIjoxMywiY2hhdmUiOnsiaWQiOjMyLCJub21lIjoiTGluayIsInZh
+        bG9yIjoiaHR0cDovL2ltYWdlbnMuaXN1cHBseS5jb20uYnIvNDA5L29yaS85
+        Nzg4NTc2ODYxNDA5LmpwZyJ9LCJvcmRlbSI6MTMsInZpc2l2ZWwiOmZhbHNl
+        LCJmaWx0cm8iOmZhbHNlLCJzaXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwi
+        OjE0LCJjaGF2ZSI6eyJpZCI6MTcsIm5vbWUiOiJJU0JOIiwidmFsb3IiOiI4
+        NTc2ODYxNDAyIn0sIm9yZGVtIjoxNCwidmlzaXZlbCI6dHJ1ZSwiZmlsdHJv
+        Ijp0cnVlLCJzaXR1YWNhbyI6IkEifSx7InNlcXVlbmNpYWwiOjE1LCJjaGF2
+        ZSI6eyJpZCI6MjEsIm5vbWUiOiJQT0QiLCJ2YWxvciI6Ik4ifSwib3JkZW0i
+        OjE1LCJ2aXNpdmVsIjpmYWxzZSwiZmlsdHJvIjp0cnVlLCJzaXR1YWNhbyI6
+        IkEifV0sImNhdGVnb3JpYXMiOltdLCJ2YXJpYWNvZXMiOltdLCJwcmVjbyI6
+        W10sInRhZ3MiOm51bGwsIm5jbSI6eyJjb2RpZ29OY20iOjQ5MDE5OTAwLCJz
+        ZXF1ZW5jaWFsIjowLCJkZXNjcmljYW8iOiJPVVRST1MgTElWUk9TLCBCUk9D
+        SFVSQVMgRVx0SU1QUkVTU09TIFNFTUVMSEFOVEVTIn0sInByb2NlZGVuY2lh
+        Ijp7ImlkIjowLCJub21lIjoiTmFjaW9uYWwifX1dLCJ0b3RhbEVsZW1lbnRz
+        IjozLCJiYXRjaE51bWJlciI6MTA0OX0=
+    http_version: 
+  recorded_at: Fri, 27 May 2016 18:19:44 GMT
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/api/itens/stock/massivo?api_key=2290A89AA7C7493AE0536AF3A8C05E17&tipoInterface=WA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Fri, 27 May 2016 18:20:57 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: UTF-8
+      string: "{\"timestamp\":1464373257390,\"status\":404,\"error\":\"Not Found\",\"message\":\"/itens/stock/massivo\",\"path\":\"/itens/stock/massivo\"}"
+    http_version: 
+  recorded_at: Fri, 27 May 2016 18:20:57 GMT
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/api/itens/estoque/massivo?api_key=2290A89AA7C7493AE0536AF3A8C05E17&tipoInterface=WA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Fri, 27 May 2016 18:21:14 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 27 May 2016 18:21:14 GMT
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/api/itens/estoque/massivo?api_key=2290A89AA7C7493AE0536AF3A8C05E17&tipoInterface=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Fri, 27 May 2016 18:42:26 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 27 May 2016 18:42:26 GMT
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/api/itens/estoque/massivo?api_key=2290A89AA7C7493AE0536AF3A8C05E17&tipoInterface=cnova
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Fri, 27 May 2016 18:42:34 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 27 May 2016 18:42:34 GMT
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/api/itens/estoque/massivo?api_key=2290A89AA7C7493AE0536AF3A8C05E17&tipoInterface=b2w
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Fri, 27 May 2016 18:42:40 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 27 May 2016 18:42:40 GMT
+- request:
+    method: get
+    uri: http://backstg.bseller.com.br/api/itens/estoque/massivo?api_key=2290A89AA7C7493AE0536AF3A8C05E17&tipoInterface=sdlkjflas
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Fri, 27 May 2016 18:42:52 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 27 May 2016 18:42:52 GMT
+recorded_with: VCR 3.0.1

@@ -1,6 +1,32 @@
 require 'spec_helper'
 
 describe BsellerRuby::Stock do
+
+  describe 'massive' do
+    it "get massive list" do
+      VCR.use_cassette 'stock_massive' do
+        binding.pry
+        response = BsellerRuby::Stock.massive(tipoInterface: 'WA')
+        expect(response).to an_instance_of(Hash)
+      end
+    end
+
+    it "put to confirm massive list" do
+      VCR.use_cassette 'confirm_stock_massive' do
+        response = BsellerRuby::Stock.massive_confirm(batch: '1')
+        expect(response).to an_instance_of(Hash)
+        expect(response["message"]).to eql("Lote confirmado com sucesso")
+      end
+    end
+
+    it "put to confirm massive list(2)" do
+      VCR.use_cassette 'confirm_stock_massive_2' do
+        response = BsellerRuby::Item.massive_confirm(batch: 1)
+        expect(response['message']).to eql("Lote confirmado com sucesso")
+      end
+    end
+  end
+
   describe 'Items' do
     before(:context) { @list = [] }
     context 'when is valid' do

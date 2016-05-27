@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://backstg.bseller.com.br/api/itens/massivo/1?a=1&api_key=2290A89AA7C7493AE0536AF3A8C05E17
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Auth-Token:
+      - 2290A89AA7C7493AE0536AF3A8C05E17
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.7.1
+      Date:
+      - Fri, 27 May 2016 17:28:27 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+      X-Application-Context:
+      - application:8081
+    body:
+      encoding: UTF-8
+      string: "{\"message\":\"Lote confirmado com sucesso\"}"
+    http_version: 
+  recorded_at: Fri, 27 May 2016 17:28:27 GMT
+recorded_with: VCR 3.0.1

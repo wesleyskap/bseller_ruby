@@ -3,7 +3,7 @@ require 'spec_helper'
 describe BsellerRuby::Item do
   describe 'massive' do
     it "get massive list" do
-      response = BsellerRuby::Item.massive(tipoInterface: 'WAL')
+      response = BsellerRuby::Item.massive(tipoInterface: 'WA')
       expect(response).to an_instance_of(Hash)
     end
 
@@ -97,6 +97,7 @@ describe BsellerRuby::Item do
 
   describe ".find" do
     it 'find an item' do
+      binding.pry
       VCR.use_cassette('item_find', match_requests_on: [:headers]) do
         item = BsellerRuby::Item.find('262261', 'SITE')
         expect(item).to eql({"codigoItem"=>"262261", "codigoTerceiro"=>"262261", "codigoFornecedor"=>"7858778", "nome"=>"Teste", "titulo"=>nil, "descricao"=>nil, "marca"=>nil, "situacao"=>"A", "dataCadastro"=>"2015-10-23 19:55:12", "dataAtualizacaoCadastro"=>nil, "operacao"=>"N", "itemPai"=>false, "codigoItemPai"=>nil, "brinde"=>false, "tipoItem"=>"P", "itemVirtual"=>{"tipoItemVirtual"=>nil, "itemFisico"=>false, "prazoValidadeGarantia"=>nil, "tipoGarantia"=>nil}, "prazoGarantiaFornecedor"=>nil, "tipoTransporte"=>{"id"=>1, "nome"=>"Leve"}, "unidadeMedida"=>{"id"=>"UN", "nome"=>"Unidade"}, "okFiscal"=>false, "vendavel"=>false, "controlaVenda"=>false, "estruturaMercadologica"=>{"departamento"=>{"id"=>1, "nome"=>"Livro"}, "setor"=>{"id"=>1, "nome"=>"Negócio"}, "familia"=>{"id"=>1, "nome"=>"Administração e Negócios"}, "subFamilia"=>{"id"=>1, "nome"=>"Administração"}}, "dataLancamento"=>nil, "quantidadePrevenda"=>nil, "dimensoes"=>{"altura"=>1.0, "largura"=>1.0, "comprimento"=>1.0}, "peso"=>{"unitario"=>1.0, "bruto"=>1.0}, "ean"=>[{"codEan"=>119697000386}], "componentesKit"=>[], "fichaTecnica"=>[], "categorias"=>[], "variacoes"=>[], "preco"=>[], "tags"=>nil})
