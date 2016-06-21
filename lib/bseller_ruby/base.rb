@@ -64,7 +64,7 @@ module BsellerRuby
         params[:payload] = params[:body]
       end
       headers = { accept: 'application/json', content_type: 'application/json', 'X-AUTH-TOKEN' => ws['json_token'] }
-      RestClient::Request.execute({ verify_ssl: false, method: method, url: "#{ws['json_endpoint']}/#{path}&api_key=#{ws['json_token']}", headers: headers }.merge(params), &block)
+      RestClient::Request.execute({ verify_ssl: false, method: method, url: "#{ws['json_endpoint']}/#{path}&api_key=#{ws['json_token']}", headers: headers, :timeout => 600, :open_timeout => 600}.merge(params), &block)
     end
 
     def self.to_params(params)
