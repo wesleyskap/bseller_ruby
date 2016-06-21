@@ -5,7 +5,6 @@ describe BsellerRuby::Stock do
   describe 'massive' do
     it "get massive list" do
       VCR.use_cassette 'stock_massive' do
-        binding.pry
         response = BsellerRuby::Stock.massive(tipoInterface: 'WA')
         expect(response).to an_instance_of(Hash)
       end
