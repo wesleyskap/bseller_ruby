@@ -5,7 +5,6 @@ describe BsellerRuby::Tracking do
     it 'get massive list' do
       VCR.use_cassette('tracking_massive_list') do
         @response = BsellerRuby::Tracking.massive(unidadeNegocio: 'B2W', maxRegistros: 10)
-        binding.pry
         expect(@response).to an_instance_of(Hash)
       end
     end
