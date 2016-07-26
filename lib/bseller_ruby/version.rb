@@ -1,3 +1,3 @@
 module BsellerRuby
-  VERSION = "0.1.9.3"
+  VERSION = "0.2.0.0"
 end
